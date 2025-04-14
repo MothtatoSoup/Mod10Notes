@@ -18,6 +18,11 @@
 // // document.getElementById("button").addEventListener("click", changeText)
 
 
+
+//--------------------------------------------------------------------
+
+
+
 // // O B J E C T S
 // // SYNTAX
 
@@ -135,10 +140,77 @@ usere.surname = '_____';
 usere.name = "E"
 delete usere.name
 
+//--------------------------------------------------------------------
+// O B J E C T S take 2
+// A collection of related data (Properties) and functions (methods) often reping real-world entity (person, movie, book, etc...)
 
+const steve = {
+    // OBJECT STATES
+    // these properties describe the state of the object or it's char
+    name: "Steve",
+    Lname: "Minecraft",
+    age: 55,
+    isEmployed: false,
+    // OBJECT BEHAVIORS (methods)
+    sayHello: function(){
+        console.log("I.... AM STEVE")
+    },
+    action: function(){
+        console.log("CHICKEN JOCKEY!!!")
+    },
+}
+
+console.log(steve.Lname);
+steve.sayHello()
+steve.action()
+
+const spongeB = {
+    name: "SpongeBob",
+    Lname: "Squarepants",
+    isEmployed: true,
+    sayHello: function(){
+        console.log("hahahahahahahaha")
+    },
+    action: function(){
+        console.log("I am making a krabby patty")
+    },
+}
+spongeB.sayHello()
+
+// Dynamic Coding
+
+let book = {
+    title: "To Kill a Mockingbird",
+    author: "Harper Lee",
+    displayInfo: function(){
+        console.log(`${this.title} by ${this.author}`)
+    },
+}
+book.displayInfo();
+
+
+
+
+// ---------------------------------------------------------------------------------------------
 // Hardcoding is very redudent so heres:
-// CLASSES
+// C L A S S E S
 
+class Book {
+    constructor(title, author, genre){
+        this.title = title; // whatever is passed into this, make it = to title
+        this.author = author;
+        this.genre = genre;
+    }
+    displayInfo(){
+        console.log(`A ${this.genre} book called ${this.title} by ${this.author}`);
+    }
+}
+
+let myBook = new Book("The Hobbit","J.R.R Tolkien","Fantasy");
+myBook.displayInfo();
+
+let mySecBook = new Book("Dune", "Frank Herbert" , "Sci-Fi");
+mySecBook.displayInfo();
 
 
 
