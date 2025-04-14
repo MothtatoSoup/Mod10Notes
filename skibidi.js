@@ -213,6 +213,11 @@ let mySecBook = new Book("Dune", "Frank Herbert" , "Sci-Fi");
 mySecBook.displayInfo();
 
 
+// Private properties
+// #name  makes it privite properties
+// can only change w/ in class
+
+
 
 
 
